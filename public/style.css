@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f7fb;
+  color: #222;
+
+}
+
+body > div {
+  padding: 16px;
+  min-width: 560px;
+}
+
+h1 {
+  font-size: 1.25rem;
+  margin: 0 0 12px;
+}
+
+button {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.summary,
+.structure,
+.blocks {
+  margin-top: 12px;
+}
+
+.summary-item,
+.block-item,
+.tag-item {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.tilda-block {
+  display: grid;
+  gap: 4px;
+  padding: 10px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.tilda-block-group {
+  margin-top: 16px;
+}
+
+.tilda-block-group:first-child {
+  margin-top: 0;
+}
+
+.tilda-block-group h2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.tilda-block-group h2 span {
+  min-width: 24px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  color: #374151;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.tilda-block:first-of-type {
+  border-top: none;
+}
+
+.tilda-block-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.tilda-block-name::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #16a34a;
+}
+
+.tilda-block.is-hidden .tilda-block-name::before {
+  background: #6b7280;
+}
+
+.tilda-block.is-hidden {
+  opacity: 0.75;
+}
+
+.tilda-block-link {
+  color: #2563eb;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+}
+
+.empty {
+  color: #6b7280;
+}
+
+.tree-node {
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.tree-node span {
+  display: block;
+}
+
+.result-box {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  max-height: 420px;
+  overflow: auto;
+}
+
+.error {
+  color: #b91c1c;
+}

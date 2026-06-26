@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "FindTilda",
+  "version": "0.1.0",
+  "description": "Inspect HTML pages and collect structure/block information.",
+  "permissions": ["scripting", "tabs", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "assets/background.js"
+  },
+  "action": {
+    "default_title": "FindTilda",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "sidebar_action": {
+    "default_title": "Page Structure",
+    "default_page": "sidebar.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["assets/content-script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
